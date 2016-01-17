@@ -140,3 +140,40 @@ console.log(this.name);
 var tiagoAlves= new fighter("Tiago","159cm","64kg","southpaw");
 var donaldCerony= new fighter("Donald","168cm","70kg","kickboxer");
 console.log(donaldCerony.getHeight());
+
+
+
+
+var Ingred= function(name,kcal,fat,col,sod,carb,sugar,pro){
+  this.name=name;
+  this.kcal=kcal;
+  this.fat=fat;
+  this.col=col;
+  this.sod=sod;
+  this.carb=carb;
+  this.sugar=sugar;
+  this.pro=pro
+};
+
+blackBean= new Ingred("black beans","300 kcals","0.9g","0mg","9mg","63g","2.1g","21g");
+chicken= new Ingred("chicken","239 kcal","14g","88mg","82g","0g","0g","27g");
+console.log(blackBean.fat);
+
+
+var menu = { 
+"food":{
+  "chickenbeans":{ 
+  "ingredients": [blackBean, chicken]
+  },
+  
+  "Spicy Chicken Risotto Fritters":{
+    "ingredients": [chicken,"pancetta","pepperJack Cheese"],
+  },
+}
+};
+
+console.log(menu.food.chickenbeans.ingredients[0]['kcal']);
+console.log(menu.food['Spicy Chicken Risotto Fritters']['ingredients'][0]['fat']);
+console.log(menu.food['Spicy Chicken Risotto Fritters']['ingredients'][1]);
+
+
